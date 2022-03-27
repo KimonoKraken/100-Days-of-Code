@@ -99,6 +99,9 @@ machine_on = True
 while machine_on:
     print("You can order an espresso, latte, or cappuccino.")
     user_request = input("What would you like?: ").lower()
+    if user_request == "off":
+        machine_on = False
+        
     while user_request == "report":
         resource_report()
         user_request = input("\nWhat would you like?: ").lower()
