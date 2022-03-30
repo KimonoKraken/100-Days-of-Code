@@ -24,7 +24,9 @@ def paint():
         painting.sety(y + 50)
         for dot in range(10):
             painting.color(random_color())
-            painting.dot(20)
+            painting.pendown()
+            painting.shape("circle")
+            painting.stamp()
             painting.penup()
             painting.forward(50)
             painting.pendown()
