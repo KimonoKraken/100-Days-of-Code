@@ -31,6 +31,8 @@ def generate_pass():
 def save():
 
     website = website_entry.get()
+    website = website.lower()
+
     email = email_entry.get()
     password = password_entry.get()
     new_data = {
@@ -68,6 +70,8 @@ def save():
 
 def search():
     website = website_entry.get()
+    website = website.lower()
+
     with open("password_vault.json", "r") as data_file:
         # reading old data
         data = json.load(data_file)
